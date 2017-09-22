@@ -17,13 +17,18 @@ class Projects extends Component {
         );
       });
     }
-    console.log(this.props) 
+    
     return (
       <div className="Projects">
         {ProjectItems}
       </div>
     );
   }
+}
+
+Projects.propTypes = {
+  projects: React.PropTypes.array,
+  onDelete: React.PropTypes.func
 }
 
 export default Projects;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 
-class AddProjects extends Component {
+class AddProject extends Component {
 
     constructor(){
         super();
@@ -23,7 +23,7 @@ class AddProjects extends Component {
                 title: this.refs.title.value,
                 category: this.refs.category.value
             }}, () => {
-                //console.log(this.state);
+                
                 this.props.addProject(this.state.newProject);
             });
         }
@@ -55,4 +55,8 @@ class AddProjects extends Component {
   }
 }
 
-export default AddProjects;
+AddProject.propTypes = {
+    categories: React.PropTypes.array,
+    addProject: React.PropTypes.func
+  }
+export default AddProject;
